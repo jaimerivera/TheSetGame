@@ -1,0 +1,154 @@
+﻿/*html, body {
+    height: 100%;
+}*/
+
+body {    
+    font-family: Verdana,Arial,sans-serif/*{ffDefault}*/; 
+    font-size: 1.1em/*{fsDefault}*/;     
+    color: #232323;
+    background-color: #333;
+    margin: 0;
+    padding: 0;    
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+.title-container {
+    font-family: 'Lucida Handwriting', Arial;
+    width: 100%;
+    margin-left:auto; margin-right:auto;
+    text-align:center; color:#444; font-size: 1.6em; font-weight:bold; 
+    padding-top:10px; padding-bottom:10px;
+    border-radius: 0;
+}
+
+.tutorial-title {
+    font-size:1em; padding-top: 5px; display:inline-block;
+}
+
+.content-div-container {
+    position:relative; 
+    width:100%; min-height:550px;    
+    padding-top:0;
+    background-color: #fff;
+    border-radius:0;
+}
+
+/*************************************************************************/
+/*MAIN PAGE STYLES*/
+/*************************************************************************/
+
+.menu-container {
+    display:block; 
+    padding-top:50px;        
+}
+
+.menu-button {
+    width: 80%; display:block; 
+    margin-bottom:10px; margin-left:auto; margin-right:auto;
+    padding-top: 10px; padding-bottom: 10px;
+}
+
+.tutorial-container {        
+    padding-left:10px;
+    padding-right: 10px;
+    display:none;
+    color: #333;
+    font-size: 0.8em;
+}
+
+.tutorial-title {
+    font-size: 2em; padding-top: 5px; display:inline-block;
+}
+
+.feature-image {
+    margin-left:auto; margin-right:auto; 
+    display:block;
+    height: 168px;
+    width: 240px;
+}
+
+.tutorial-image {
+    display:inline-block;
+    height: 60px;
+    width: 85px;
+    border: 2px solid #ccc;
+}
+
+/************************************************************************/
+/*GAME PAGE STYLES*/
+/***********************************************************************/
+
+.stats-table-container {
+    width: 100%;        
+}
+
+.board-table {    
+    padding-top:10px; padding-bottom:10px;
+    margin-left:auto; margin-right:auto;
+    border-spacing: 3px;
+}
+
+/*.board-table tbody tr {
+    min-height: 100px;
+    max-height: 100px;
+}*/
+
+    .board-table tbody td {
+        height: 60px;
+        max-height: 60px;
+        width: 85px;
+        max-width: 85px;  
+        padding:0;
+        border-radius: 3px;
+        background-color: #fff;                   
+    }
+
+     .board-table tbody td img {            
+            width: 100%;
+            vertical-align: middle;
+        }
+
+.normal-border {
+    border: 2px solid #ccc;
+}
+
+.selected-border {
+    border: 2px solid orange;   
+}
+
+.cancel-button {
+    float:right;
+    font-size: 0.8em;   
+    padding-top: 2px;
+    padding-bottom: 2px; 
+}
+
+.stats-div {
+    padding:0;    
+    display: inline-block;
+}
+
+    .stats-div table {
+        border-collapse: collapse;
+    }
+    .stats-div th {   
+        font-size: 0.75em;     
+        text-align: left;
+        background-color: #ddd;
+        border: 1px solid #555;
+        min-width: 90px;
+    }
+
+    .stats-div td {      
+        font-size: 0.75em;  
+        border: 1px solid #555;
+        min-width: 90px;;
+        text-align: center;
+    }
+
+.cheat {
+    display: none;
+}

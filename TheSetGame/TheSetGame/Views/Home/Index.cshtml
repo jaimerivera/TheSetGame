@@ -1,0 +1,166 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="menuDiv" class="menu-container">
+    <a href="@Url.Action("Game","Home")" id="newGameButton" class="menu-button">New Game</a>
+    <div id="tutorialButton" class="menu-button">Tutorial</div>
+    <div id="quitButton" class="menu-button">Quit</div>
+</div>   
+    
+<div id="tutorialDiv" class="tutorial-container">
+    <div id="tutorialHeader" style="margin-bottom: 10px;">
+        <span class="tutorial-title">Tutorial</span>
+        <button id="tutorialMenuButton" style="float:right;" >Cancel</button>
+    </div>
+    The Set Card Game is exciting to play and will challenge players of all ages.
+    The ultimate goal of the Set Card Game is to find all 27 possible sets in the shortest amount of time.
+    
+    <h2>Card Features</h2>
+    <img class="feature-image" src="@Url.Content("~/Images/FeatureDiagram.jpg")" />
+
+    <h2>Rules</h2>
+    The objective of the game is to identify a 'set' of three cards from 12 or 15 cards laid out on the game board. 
+    Each card has a variation of the following four features:
+
+    <h4>(A) Color:</h4>
+    Each card is red, green, or purple.
+
+    <h4>(B) Symbol:</h4>
+    Each card contains ovals, rectangles, or diamonds.
+
+    <h4>(C) Number:</h4>
+    Each card has one, two, or three symbols.
+
+    <h4>(D) Filling:</h4>
+    Each card is solid, open, or dots.
+
+    <h2>Set Definition</h2>
+    A 'Set' consists of three cards in which each feature is EITHER the same on each card OR is different on each card. 
+    That is to say, any feature in the 'Set' of three cards is either common to all three cards or is different on each card.
+
+    <h3>For example, the following are SETS:</h3>
+    
+    <img class="tutorial-image" src="@Url.Content("~/Images/10.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/19.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/1.jpg")" /><br />
+    All three cards are diamonds; all have same number; all have same fill i.e. solid fill; and all have different color.
+    <br /><br /><br />
+    
+    <img class="tutorial-image" src="@Url.Content("~/Images/71.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/44.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/17.jpg")" /><br />
+    All three cards have same fill; all have same number; all have same color; and all have different symbol.
+    <br /><br /><br />
+
+    <img class="tutorial-image" src="@Url.Content("~/Images/30.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/33.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/36.jpg")" /><br />
+    All three cards have same symbol, same number, and same color, but different fill.
+    <br /><br /><br />
+
+    <img class="tutorial-image" src="@Url.Content("~/Images/73.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/74.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/75.jpg")" /><br />
+    All three cards have same symbol, same color and same fill, but different number.
+    <br /><br /><br />
+
+    <img class="tutorial-image" src="@Url.Content("~/Images/13.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/73.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/34.jpg")" /><br />
+    All three cards have different color, different symbol, different fill, but same number.
+    <br /><br /><br />
+
+    <img class="tutorial-image" src="@Url.Content("~/Images/73.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/29.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/12.jpg")" /><br />
+    All three cards have different number, different color, different symbol, but same fill.
+    <br /><br /><br />
+
+    <img class="tutorial-image" src="@Url.Content("~/Images/73.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/71.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/60.jpg")" /><br />
+    All three cards have different fill, different number, different color, but same symbol.
+    <br /><br /><br />
+
+    <img class="tutorial-image" src="@Url.Content("~/Images/71.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/12.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/40.jpg")" /><br />
+    All three cards have different symbol, different fill, different number, but same color.
+    <br /><br /><br />
+
+    <img class="tutorial-image" src="@Url.Content("~/Images/40.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/74.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/9.jpg")" /><br />
+    All three cards have different symbol, different fill, different number, but same color.
+    
+    <h3>The following are "NOT SETS":</h3>
+    <h5>The magic rule: If two are and one is not, then it is not a set.</h5>
+
+    <img class="tutorial-image" src="@Url.Content("~/Images/28.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/16.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/73.jpg")" /><br />
+    All three cards have different color, different symbol, same number; however two have solid fill and one is filled with dots.
+    <br /><br /><br />
+
+    <img class="tutorial-image" src="@Url.Content("~/Images/29.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/35.jpg")" />
+    <img class="tutorial-image" src="@Url.Content("~/Images/41.jpg")" /><br />
+    All three cards have same number, same symbol, different fill; but two are of same color and one is not.
+    
+    <h2>Player Options</h2>
+    Upon selection of the "New Game" option, the player is prompted to select "One Player" or "Two Players."  Selecting the "One Player" option
+    will start the game in single player mode.  Selecting the "Two Players" option will display a dialog for each player to enter their name.
+    During game play, each player selects their name to select a set.  When the set is selected, the player will be awarded one point.
+
+    <h2>The Play</h2>
+    The system shuffles the cards and lays twelve cards (in a rectangle) with four rows and three columns face up on the game board. 
+    The player selects three cards to form a set. The border of first two cards will be highlighted with orange color. 
+    When the player selects third card, the system determines whether it is a valid set or not. If it is not a valid set, 
+    a message is displayed to the player saying that the set made is not valid. At this point he can deselect any card and 
+    select another card to make a set.  If it is a valid set, the 'Set' is removed from the board automatically. 
+    The empty spaces are now replaced with three new cards from the deck by the system automatically. 
+    <br /><br />
+
+    If a set cannot be formed within the twelve cards which are displayed on the board, the system automatically deals 
+    three more cards and lays them on the game board in the 5th row. From the 15 cards the player will be able to find a set. 
+    <br /><br />
+
+    The play continues until the deck is depleted. At the end of the play there may be six or nine cards which do not form a 'Set'.
+    <br /><br />
+
+    When the player makes all the sets, a victory message is displayed saying “Congratulations!! You Won!! Do you want to play again?” 
+    At this point he could continue or quit the game.
+    <br /><br />
+
+    <h2>Hint</h2> 
+    At any point during the game, the "Hint" option is available.  The first time the "Hint" button is selected, the first two cards
+    of the available set will be displayed.  If the player selects the "Hint" option second time before selecting the third card, 
+    all three cards of the available set will be displayed. The first two cards will be the same two as on the first selection. The third 
+    card will be the one that makes a set.
+    <br /><br />
+
+</div>            
+
+<script>
+        $(function () {
+            $('#newGameButton').button();
+            $('#tutorialButton').button();
+            $('#quitButton').button();
+            $('#tutorialMenuButton').button();
+
+            $('#tutorialButton').click(function () {
+                $('#menuDiv').hide();
+                $('#tutorialDiv').show();
+            });
+            
+            $('#quitButton').click(function () {
+                window.close();
+            });
+
+            $('#tutorialMenuButton').click(function () {
+                $('#tutorialDiv').hide();
+                $('#menuDiv').show();
+            });
+        });
+</script> 

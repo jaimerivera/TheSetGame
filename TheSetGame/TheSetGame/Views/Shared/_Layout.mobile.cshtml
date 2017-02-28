@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>SWE6613 Set Game</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />        
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+        <link href="~/Content/themes/redmond/minified/jquery-ui.min.css" rel="stylesheet" />
+        @Styles.Render("~/Content/cssMobile")        
+        
+        <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+        <script src="~/Scripts/jquery-ui-1.9.0.min.js"></script>        
+
+        @Scripts.Render("~/bundles/modernizr")        
+
+    </head>    
+    <body onload="window.open('', '_self', '');">    
+    <div id="title" class="ui-widget-header title-container ui-corner-all">
+        SET CARD GAME
+    </div>
+
+    <div id="contentDiv" class="content-div-container ui-corner-all">                   
+        @RenderBody()       
+        <script>
+            var mobile = true;
+        </script>
+    </div> <!--ContentDiv ends here-->
+    </body>
+</html>

@@ -1,0 +1,185 @@
+﻿html, body {
+    height: 100%;
+}
+
+body {    
+    font-family: Verdana,Arial,sans-serif/*{ffDefault}*/; 
+    font-size: 1.1em/*{fsDefault}*/;     
+    color: #232323;
+    background-color: #333;
+    margin: 0;
+    padding: 0;    
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+.title-container {
+    font-family: 'Lucida Handwriting', Arial;
+    width: 80%; min-width: 1000px;
+    margin-left:auto; margin-right:auto;
+    text-align:center; color:#444; font-size: 2em; font-weight:bold; 
+    padding-top:5px; padding-bottom:5px;
+}
+
+.content-div-container {
+    position:relative; 
+    min-width:1000px; max-width:80%; min-height:700px;
+    margin-left:auto; margin-right:auto; margin-top: 2px; 
+    padding-top:0;
+    background-color: #fff;
+}
+
+/*************************************************************************/
+/*MAIN PAGE STYLES*/
+/*************************************************************************/
+.last-card-selected {
+    border: 2px solid red;
+}
+.menu-container {
+    display:block; 
+    padding-top:100px;        
+}
+
+.menu-button {
+    max-width: 25%; min-width:150px; display:block; 
+    margin-bottom:10px; margin-left:auto; margin-right:auto;
+}
+
+.tutorial-container {        
+    padding-left:10px;
+    padding-right: 10px;
+    display:none;
+    color: #333;
+    font-size: 0.8em;
+}
+
+.tutorial-title {
+    font-size: 2em; padding-top: 5px; display:inline-block;
+    font-weight:bold;
+}
+
+.feature-image {
+    margin-left:100px;
+    display:block;
+    height: 210px;
+    width: 304px;
+}
+
+.tutorial-image {
+    display:inline-block;
+    height: 70px;
+    width: 115px;
+    border: 2px solid #ccc;
+    margin-right: 10px;
+}
+
+/************************************************************************/
+/*GAME PAGE STYLES*/
+/***********************************************************************/
+
+.stats-table-container {
+    min-width: 300px;
+    max-width: 300px;
+    position: absolute;
+    right: 0;  
+    top:0;  
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.board-table {
+    padding-top:5px; padding-bottom:10px;
+    margin-left:auto; margin-right:auto;
+    border-spacing: 5px;
+}
+
+/*.board-table tbody tr {
+    min-height: 100px;
+    max-height: 100px;
+}*/
+
+    .board-table tbody td {
+        height: 100px;
+        max-height: 100px;
+        width: 144px;
+        max-width: 144px;
+        background-color: #fff;   
+        border-radius: 4px;
+        padding: 0;
+    }
+
+        .board-table tbody td img {            
+            width: 100%;
+            vertical-align: middle;
+        }
+
+.normal-border {
+    border: 3px solid #ccc;
+}
+
+.selected-border {
+    border: 3px solid orange;   
+}
+
+.empty-background {
+    border: 2px solid #fff;
+    background-color: #eee;
+}
+
+.cancel-button {
+    float:right;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.stats-div {    
+    padding:0;
+    float: right;    
+    display: block;
+    margin-top: 10px;
+}
+
+    .stats-div table {        
+        border-collapse: collapse;
+    }
+    .stats-div th {
+        padding: 5px 10px 5px 5px;
+        text-align: left;
+        background-color: #ddd;
+        border: 1px solid #555;
+        min-width: 150px;
+    }
+
+    .stats-div td {        
+        border: 1px solid #555;
+        min-width: 120px;
+        text-align: center;
+    }
+
+.cheat {
+    clear:both; float:right;
+}
+
+.hintCard {
+    margin-left: 5px;
+    width: 115px;
+    height:80px;        
+}
+
+.player-names-container {
+    text-align:center;    
+    display:none; 
+    margin:0;
+    padding:0;
+}
+
+.player-score {
+    margin-left: 10px;
+    margin-bottom:0;
+    margin-top:5px;
+    padding: 5px;
+    display:inline-block;   
+    cursor:pointer;    
+}

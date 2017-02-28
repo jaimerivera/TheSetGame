@@ -1,0 +1,94 @@
+﻿@{
+    ViewBag.Title = "Game";
+}
+
+<div id="gameStats" class="stats-table-container">        
+    <button refUrl="@Url.Action("Index","Home")" id="cancelGameButton" class="cancel-button" >Cancel</button>
+    <button id="hintButton" class="cancel-button" >Hint</button>
+    <div id="onePlayerDiv" class="stats-div">
+        <table>        
+            <tr><th>Selected Sets</th></tr>
+            <tr><td id="selectedSets">0</td></tr>         
+        </table>
+    </div>    
+    <div class="stats-div">
+        <table>        
+            <tr><th>Cards in Deck</th></tr>
+            <tr><td id="cardsInDeck">0</td></tr>         
+        </table>
+    </div>
+    <div class="stats-div">
+        <table>        
+            <tr><th>Sets Available</th></tr>
+            <tr><td id="setsAvailable">0</td></tr>         
+        </table>
+    </div>
+    <div class="stats-div">
+        <table>        
+            <tr><th>Game Time</th></tr>
+            <tr><td id="playTime">0</td></tr>         
+        </table>
+    </div>    
+    @*<div id="cheat" class="cheat"></div>*@
+</div>
+
+<div id="twoPlayersDiv" class="player-names-container">  
+    <span class="player-score ui-corner-all ui-state-active" id="playerOneScore">Player One</span>
+    <span class="player-score ui-corner-all ui-state-default" id="playerTwoScore">Player Two</span>
+</div>
+<table id="boardTable" class="board-table">
+    <tbody>
+        <tr>
+            <td cardIndex ="0" isEmpty="1" class="normal-border"></td>
+            <td cardIndex ="1" isEmpty="1" class="normal-border"></td>
+            <td cardIndex ="2" isEmpty="1" class="normal-border"></td>
+        </tr>
+        <tr>
+            <td cardIndex ="3" isEmpty="1" class="normal-border"></td>
+            <td cardIndex ="4" isEmpty="1" class="normal-border"></td>
+            <td cardIndex ="5" isEmpty="1" class="normal-border"></td>
+        </tr>
+        <tr>
+            <td cardIndex ="6" isEmpty="1" class="normal-border"></td>
+            <td cardIndex ="7" isEmpty="1" class="normal-border"></td>
+            <td cardIndex ="8" isEmpty="1" class="normal-border"></td>
+        </tr>
+        <tr>
+            <td cardIndex ="9" isEmpty="1" class="normal-border"></td>
+            <td cardIndex ="10" isEmpty="1" class="normal-border"></td>
+            <td cardIndex ="11" isEmpty="1" class="normal-border"></td>
+        </tr>
+        <tr>
+            <td cardIndex ="12" isEmpty="1" class="normal-border"></td>
+            <td cardIndex ="13" isEmpty="1" class="normal-border"></td>
+            <td cardIndex ="14" isEmpty="1" class="normal-border"></td>
+        </tr>
+    </tbody>
+</table>
+
+<div id="cancelGameDialog">Do you want to cancel the game?</div>
+<div id="winGameDialog">Congratulations you won!!!<br /> Do you want to play again?</div>
+<div id="noSetsAvailableDialog">No sets available in the board. <br />Do you want to play again?</div>
+<div id="invalidSetDialog"></div>
+<div id="hintDialog"></div>
+<div id="picEagerLoading" style="display: none;"></div>
+<div id="playerDialog">
+    <div id="playerButtons" style="padding-top:30px;">
+        <button id="onePlayerButton">One Player</button>
+        <button id="twoPlayerButton">Two Players</button>
+    </div>
+    <div id="playerInput" style="display:none; margin-left:auto; margin-right:auto;">
+        Player 1 Name <input class="userNameInput" id="playerOneInput" maxlength="15" /><br /><br />   
+        Player 2 Name <input class="userNameInput" id="playerTwoInput" maxlength="15" /><br /><br />
+        <button id="playerSubmit">Play Now</button>
+        <button id="cancelPlayer">Cancel</button>
+    </div>
+</div>
+
+<script>
+    var imgPath = "@Url.Content("~/Images/")";   
+</script>
+
+@Scripts.Render("~/bundles/gameScripts")
+@*<script src="~/Scripts/GameEngine.js?v2"></script>
+<script src="~/Scripts/GameUI.js?v2"></script>  *@
